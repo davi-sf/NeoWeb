@@ -226,14 +226,6 @@ p {
     padding-bottom: 0;
 }
 
-.logo-neo {
-    position: fixed;
-    bottom: 20px; /* Ajuste conforme necessário */
-    left: 20px; /* Ajuste conforme necessário */
-    width: 200px; /* Ajuste o tamanho conforme necessário */
-    height: auto;
-    z-index: 999; /* Garante que a imagem esteja sobreposta a outros elementos */
-}
 
 
 
