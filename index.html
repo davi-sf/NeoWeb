@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Paytone+One&display=swap" rel="stylesheet">
+    <img src="logo-neoenergia-1024.png" class="logo-neo" alt="Segundo logo no canto inferior esquerdo">
+    <link rel="stylesheet" href="style.css">
+    <title>NovoProjetoNeo</title>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="Logo NeoWeb(8).png" alt="Logo da empresa">
+        <h1>BEM VINDO À NEOWEB</h1>
+        <p>Aqui você encontra informações sobre procedimentos realizados:</p>
+    </div>
+    <div class="button-container">
+        <button id="titularBtn" class="button">
+            <img src="homem.png" alt="Ícone titular">
+            <span> Pelo titular</span>
+        </button>
+        <button id="terceirosBtn" class="button">
+            <img src="pessoas.png" alt="Ícone terceiros">
+            <span>Por terceiros</span>
+        </button>
+        <button id="autorizadasBtn" class="button">
+            <img src="pessoa-nao-autorizada.png" alt="Ícone autorizadas">
+            <span> Pessoas Autorizadas</span>
+        </button>
+    </div>
+    <div id="infoOverlay" class="info-overlay">
+        <div id="infoDisplay" class="info-display"></div>
+    </div>
+    <button onclick="fecharInfo()" id="botao-voltar" class="close-button">Voltar</button>
+    <script src="script.js"></script>
+</body>
+</html>
