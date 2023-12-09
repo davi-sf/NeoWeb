@@ -10,14 +10,14 @@ document.addEventListener('DOMContentLoaded', function() {
             { label: 'Alteração de CPF', url: 'https://drive.google.com/file/d/1ars8SJAMUF2q1c7bQ4E1t5WxAEru4GNG/view?usp=sharing' },
             { label: 'Alteração de Telefone/Email (inclusão, exclusão, alteração e correção)', url: 'https://drive.google.com/file/d/1MdW22Ob3W2kePo-JZtIeMjl48D0L-KXi/view?usp=sharing' },
             { label: 'Alteração de endereço da unidade consumidora', url: 'https://drive.google.com/file/d/1zF1CO0FyksTVtAN_S5n-SgPAtkvXi6PF/view?usp=drive_link' },        
-            // ... mais opções
+            // ... 
         ],
         terceirosBtn: [
             { label: 'Adesão ou cancelamento da tarifa baixa renda', url: 'https://davi-sf.github.io/InConstructionPage/' },
             { label: 'Adesão ou cancelamento da tarifa branca', url: 'https://davi-sf.github.io/InConstructionPage/' },
             { label: 'Alteração de dados fatura: (Entrega de fatura, data certa e fatura por e-mail)', url: 'https://davi-sf.github.io/InConstructionPage/' },
             { label: 'Alteração, inclusão ou cancelamento de serviços da fatura (mudança endereço da entrega da fatura digital ou física)', url: 'https://davi-sf.github.io/InConstructionPage/' },   
-            // ... mais opções
+            // ... 
         ],
         autorizadasBtn: [
             { label: 'Informações sobre dúvidas cobranças na fatura', url: 'https://davi-sf.github.io/InConstructionPage/' },
@@ -51,3 +51,43 @@ document.addEventListener('DOMContentLoaded', function() {
 
     botaoVoltar.addEventListener('click', fecharInfo);
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const balao = document.querySelector('.balao');
+    const mainContent = document.querySelector('.main-content');
+
+    function mostrarConteudoPrincipal() {
+        balao.style.display = 'none';
+        mainContent.style.display = 'block';
+    }
+
+    // Obter a duração das animações do balão
+    const animationDuration = 10000; // Tempo total das animações em milissegundos
+
+    // Definir um atraso para a exibição do conteúdo principal após a conclusão da animação do balão
+    setTimeout(mostrarConteudoPrincipal, animationDuration);
+});
+
+// Captura o elemento .balao
+const balao = document.getElementById('balao');
+
+// Captura o elemento .main-content
+const mainContent = document.querySelector('.main-content');
+
+// Define uma função para exibir o .main-content após um evento (por exemplo, um clique)
+function mostrarMainContent() {
+  // Adiciona a classe 'show-content' para mostrar o .main-content
+  mainContent.classList.add('show-content');
+}
+
+// Evento que aciona a função para mostrar o .main-content após um clique na div .balao
+balao.addEventListener('click', mostrarMainContent);
+
+// Função para fechar o .main-content
+function fecharInfo() {
+  mainContent.classList.remove('show-content');
+}
+
+
+
+  

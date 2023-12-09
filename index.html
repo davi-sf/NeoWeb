@@ -7,34 +7,45 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Paytone+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans&family=Paytone+One&family=Roboto:ital,wght@1,100;1,300&family=Silkscreen&family=Teko:wght@300;400&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/electrical-energy.png" type="image/x-icon">
     <title>NeoWeb</title>
 </head>
 <body>
-    <div class="logo-container">
-        <img src="images/Logo NeoWeb(8).png" alt="Logo da empresa">
-        <h1>BEM VINDO À NEOWEB</h1>
-        <p>Aqui você encontra informações sobre procedimentos realizados:</p>
+
+    <div class="balao">
+
+        <p class="texto">Nesse site você encontra instruções sobre o treinamento de operação da NeoEnergia, empresa parceira da AeC </p>
+        <img class="icone-balao" src="images/hora-do-cafe.png" alt="Imagem abaixo do balão">
     </div>
-    <div class="button-container">
-        <button id="titularBtn" class="button">
-            <img src="images/homem.png" alt="Ícone titular">
-            <span> Pelo titular</span>
-        </button>
-        <button id="terceirosBtn" class="button">
-            <img src="images/pessoas.png" alt="Ícone terceiros">
-            <span>Por terceiros</span>
-        </button>
-        <button id="autorizadasBtn" class="button">
-            <img src="images/pessoa-nao-autorizada.png" alt="Ícone autorizadas">
-            <span> Pessoas Autorizadas</span>
-        </button>
+
+      <div class="main-content hide-content">
+        <div class="logo-container">
+            <img src="images/Logo NeoWeb(8).png" alt="Logo da empresa">
+            <h1>BEM VINDO À NEOWEB</h1>
+            <p>Aqui você encontra informações sobre procedimentos realizados:</p>
+        </div>
+        <div class="button-container">
+            <button id="titularBtn" class="button">
+                <img src="images/homem.png" alt="Ícone titular">
+                <span> Pelo titular</span>
+            </button>
+            <button id="terceirosBtn" class="button">
+                <img src="images/pessoas.png" alt="Ícone terceiros">
+                <span>Por terceiros</span>
+            </button>
+            <button id="autorizadasBtn" class="button">
+                <img src="images/pessoa-nao-autorizada.png" alt="Ícone autorizadas">
+                <span> Pessoas Autorizadas</span>
+            </button>
+        </div>
+        <div id="infoOverlay" class="info-overlay">
+            <div id="infoDisplay" class="info-display"></div>
+        </div>
+        <button onclick="fecharInfo()" id="botao-voltar" class="close-button">Voltar</button>
     </div>
-    <div id="infoOverlay" class="info-overlay">
-        <div id="infoDisplay" class="info-display"></div>
-    </div>
-    <button onclick="fecharInfo()" id="botao-voltar" class="close-button">Voltar</button>
     <script src="script.js"></script>
 </body>
 </html>
