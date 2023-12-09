@@ -79,237 +79,226 @@ body {
 
 
 .main-content {
-    body {
-        margin: 0;
-        padding: 0;
-        background-image: url(images/Fundo\ Verde.jpg); /
-        background-size:cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-    }
-    
-    
-    .button-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 30vh; 
-    }
-    
-    button {
-        padding: 0;
-        margin: 20px;
-        background-color: transparent; /* Removendo a cor de fundo */
-        border: none;
-        cursor: pointer;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    button img {
-        width: 90px; /* Largura do ícone */
-        height: 90px; /* Altura do ícone */
-    }
-    
-    button i {
-        font-size: 36px; /* Tamanho do ícone */
-    }
-    
-    button span {
-        font-size: 18px; /* Tamanho do texto */
-        margin-top: 8px;
-        color: aliceblue;
-        font-family: 'Josefin Sans', sans-serif; 
-    }
-    
-    .logo-container {
-        text-align: center; /* Centraliza horizontalmente */
-        margin-top: 20px; /* Ajusta o espaço entre a logo e o topo */
-    }
-    
-    .logo-container img {
-        max-width: 270px; 
-        height: auto;
-    }
-    
-    h1 {
-        font-size: 35px; /* Tamanho do título */
-        margin-top: 12px; /* Espaçamento do topo */
-        color: aliceblue;
-        font-family: 'Josefin Sans', sans-serif;
-        
-    }
-    
-    p {
-        font-size: 20px; /* Tamanho do texto */
-        color: aliceblue;
-        margin-top: 40px; /* Espaçamento do topo */
-        font-family: 'Josefin Sans', sans-serif;
-    }
-    
-    /* Estilos para a lista de tópicos */
-    #lista-topicos {
-        margin-top: 20px;
-        font-size: 16px;
-    }
-    
-    #lista-topicos ul {
-        list-style-type: none;
-        padding: 0;
-    }
-    
-    #lista-topicos ul li {
-        margin-bottom: 5px;
-    }
-    
-    /* Estilos para a sobreposição de informações */
-    .info-overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.8);
-        justify-content: center;
-        align-items: center;
-        z-index: 999;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-      }
-    
-      .info-display {
-        display: none;
-        background-color: rgba(255, 255, 255, 0.9); /* Cor do fundo com opacidade */
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-        position: relative;
-        max-width: 80%;
-        overflow-y: auto;
-        max-height: 80%;
-        transition: opacity 0.3s ease, transform 0.3s ease;
-        font-family: 'Paytone One', sans-serif;
-        color: #333;
-    }
-    
-    /* Adicione estilos para quando estiver ativo */
-    .info-display.active {
-        display: block;
-        opacity: 1;
-        transform: scale(1);
-    }
-    
-    .info-display ul li a {
-        display: block;
-        padding: 12px 20px;
-        border-radius: 5px;
-        background-color: #f5f5f5;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        transition: background-color 0.3s ease;
-        color: #3498db;
-        text-decoration: none;
-      }
-      .info-display ul li a:hover {
-        background-color: #e0e0e0;
-        color: #2980b9;
-      }
-    
-      .info-display.active {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    
-      .info-display ul {
-        padding: 0;
-      }
-    
-    
-    /* Classe para mostrar a sobreposição ativa */
-    .info-overlay.active {
-        display: flex;
-        opacity: 1;
-      }
-    
-    
-      .info-display ul {
-        list-style: none;
-        padding: 0;
-      }
-      
-      .info-display ul li {
-        margin-bottom: 10px;
-      }
-      
-      .info-display ul li a {
-        display: block;
-        padding: 12px 20px;
-        border-radius: 5px;
-        background-color: #f5f5f5;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        transition: background-color 0.3s ease;
-        color: #3498db;
-        text-decoration: none;
-      }
-      
-      .info-display ul li a:hover {
-        background-color: #e0e0e0;
-        color: #2980b9;
-      }
-    
-    /* Estilos para o botão Voltar */
-    .close-button {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 1000;
-        padding: 8px 15px;
-        background-color: #42f44b;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        display: none;
-    }
-    
-    .close-button:hover {
-        background-color: #33cc47;
-    }
-    
-    #lista-topicos ul {
-        list-style-type: none;
-        padding: 0;
-    }
-    
-    #lista-topicos ul li {
-        margin-bottom: 15px; /* Aumenta o espaçamento entre os itens */
-    
-        line-height: 1.6; /* Adiciona espaço entre linhas */
-        transition: transform 0.3s ease; /* Adiciona uma transição ao passar o mouse */
-    
-        /* Estilos para destacar cada item da lista */
-        border-bottom: 1px solid #ccc; /* Adiciona uma linha separadora entre os itens */
-        padding-bottom: 10px; /* Espaçamento inferior */
-    }
-    
-    #lista-topicos ul li:hover {
-        transform: scale(1.05); /* Aumenta ligeiramente o tamanho ao passar o mouse */
-        transition: transform 0.3s ease; /* Adiciona uma transição suave ao passar o mouse */
-    }
-    
-    /* Remove a linha separadora do último item da lista */
-    #lista-topicos ul li:last-child {
-        border-bottom: none;
-        padding-bottom: 0;
-    }
+   display: none;
+}
+
+
+
+
+
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh; 
+}
+
+button {
+    padding: 0;
+    margin: 20px;
+    background-color: transparent; /* Removendo a cor de fundo */
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button img {
+    width: 90px; /* Largura do ícone */
+    height: 90px; /* Altura do ícone */
+}
+
+button i {
+    font-size: 36px; /* Tamanho do ícone */
+}
+
+button span {
+    font-size: 18px; /* Tamanho do texto */
+    margin-top: 8px;
+    color: aliceblue;
+    font-family: 'Josefin Sans', sans-serif; 
+}
+
+.logo-container {
+    text-align: center; /* Centraliza horizontalmente */
+    margin-top: 20px; /* Ajusta o espaço entre a logo e o topo */
+}
+
+.logo-container img {
+    max-width: 270px; 
+    height: auto;
+}
+
+h1 {
+    font-size: 35px; /* Tamanho do título */
+    margin-top: 12px; /* Espaçamento do topo */
+    color: aliceblue;
+    font-family: 'Josefin Sans', sans-serif;
     
 }
 
-.hide-content {
+p {
+    font-size: 20px; /* Tamanho do texto */
+    color: aliceblue;
+    margin-top: 40px; /* Espaçamento do topo */
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Estilos para a lista de tópicos */
+#lista-topicos {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+#lista-topicos ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#lista-topicos ul li {
+    margin-bottom: 5px;
+}
+
+/* Estilos para a sobreposição de informações */
+.info-overlay {
     display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .info-display {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.9); /* Cor do fundo com opacidade */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    max-width: 80%;
+    overflow-y: auto;
+    max-height: 80%;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    font-family: 'Paytone One', sans-serif;
+    color: #333;
+}
+
+/* Adicione estilos para quando estiver ativo */
+.info-display.active {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.info-display ul li a {
+    display: block;
+    padding: 12px 20px;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    color: #3498db;
+    text-decoration: none;
+  }
+  .info-display ul li a:hover {
+    background-color: #e0e0e0;
+    color: #2980b9;
+  }
+
+  .info-display.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .info-display ul {
+    padding: 0;
+  }
+
+
+/* Classe para mostrar a sobreposição ativa */
+.info-overlay.active {
+    display: flex;
+    opacity: 1;
+  }
+
+
+  .info-display ul {
+    list-style: none;
+    padding: 0;
   }
   
-  .show-content {
-    display: block;
+  .info-display ul li {
+    margin-bottom: 10px;
   }
+  
+  .info-display ul li a {
+    display: block;
+    padding: 12px 20px;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  .info-display ul li a:hover {
+    background-color: #e0e0e0;
+    color: #2980b9;
+  }
+
+/* Estilos para o botão Voltar */
+.close-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    padding: 8px 15px;
+    background-color: #42f44b;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+
+.close-button:hover {
+    background-color: #33cc47;
+}
+
+#lista-topicos ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#lista-topicos ul li {
+    margin-bottom: 15px; /* Aumenta o espaçamento entre os itens */
+
+    line-height: 1.6; /* Adiciona espaço entre linhas */
+    transition: transform 0.3s ease; /* Adiciona uma transição ao passar o mouse */
+
+    /* Estilos para destacar cada item da lista */
+    border-bottom: 1px solid #ccc; /* Adiciona uma linha separadora entre os itens */
+    padding-bottom: 10px; /* Espaçamento inferior */
+}
+
+#lista-topicos ul li:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho ao passar o mouse */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave ao passar o mouse */
+}
+
+/* Remove a linha separadora do último item da lista */
+#lista-topicos ul li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}

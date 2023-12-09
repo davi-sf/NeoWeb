@@ -68,25 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
     setTimeout(mostrarConteudoPrincipal, animationDuration);
 });
 
-// Captura o elemento .balao
-const balao = document.getElementById('balao');
 
-// Captura o elemento .main-content
-const mainContent = document.querySelector('.main-content');
-
-// Define uma função para exibir o .main-content após um evento (por exemplo, um clique)
-function mostrarMainContent() {
-  // Adiciona a classe 'show-content' para mostrar o .main-content
-  mainContent.classList.add('show-content');
-}
-
-// Evento que aciona a função para mostrar o .main-content após um clique na div .balao
-balao.addEventListener('click', mostrarMainContent);
-
-// Função para fechar o .main-content
-function fecharInfo() {
-  mainContent.classList.remove('show-content');
-}
 
 
 
